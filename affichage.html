@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commentaires par Technologie</title>
+</head>
+<body>
+    <h1>Commentaires par Technologie</h1>
+    <script>
+        fetch("http://localhost:3000/users")
+        .then(response => response.json())
+        .then(data => {
+            // console.log(data[0].nom);
+            console.log(data);
+            data.forEach(element => {
+                document.body.innerHTML += "<p>" + element + "</p>";
+            });
+        });
+    </script>
+</body>
+</html>
